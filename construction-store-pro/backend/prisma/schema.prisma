@@ -313,3 +313,63 @@ model SystemSetting {
   key   String @id
   value String @db.Text
 }
+
+
+enum MovementType {
+  STOCK_IN
+  STOCK_OUT
+  ADJUSTMENT
+  TRANSFER_IN
+  TRANSFER_OUT
+  DAMAGED
+  RETURN_IN
+  RETURN_OUT
+  SALE
+  PURCHASE
+}
+
+enum PaymentMethod {
+  CASH_USD
+  CASH_SOS
+  EVC_PLUS
+  ZAAD
+  SAHAL
+  BANK_TRANSFER
+}
+
+enum Currency {
+  USD
+  SOS
+}
+
+enum SaleStatus {
+  COMPLETED
+  PARTIAL
+  CREDIT
+  CANCELLED
+}
+
+enum PurchaseStatus {
+  DRAFT
+  ORDERED
+  RECEIVED
+  CANCELLED
+}
+
+enum PayStatus {
+  UNPAID
+  PARTIAL
+  PAID
+}
+
+enum CustomerType {
+  RETAIL
+  WHOLESALE
+  CONTRACTOR
+}
+
+enum ReturnType {
+  SALE
+  PURCHASE
+}
+
